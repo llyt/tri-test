@@ -122,7 +122,7 @@ function _createCalendarRow(options) {
     const today = options.currentDate.isSame(day, 'day')
     const cell = _createCalendarCell({
       isHead: i === 0,
-      day: day.format('DD'),
+      day: day.format('DD MMMM'),
       week: options.weekNum,
       today
     })
