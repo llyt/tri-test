@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="header__logo">
+        <img src="img/logo.png" alt="TriSystems Logo">
+      </div>
+      <div class="header__user">
+        <span>Иван Горностаев</span>
+        <img class="header__icon" src="img/arrow.svg" alt="">
+      </div>
+    </div>
+  </header>
+  <section class="nav">
+    <div class="nav__top">
+      <div class="nav__month">
+        <img class="prev" src="img/arrow-dark.svg" alt="" />
+        <span>Август 2019</span>
+        <img class="next" src="img/arrow-dark.svg" alt="" />
+      </div>
+      <div class="nav__event">
+        <div class="nav__days-left">
+          <span>28 дней</span>
+          <span>осталось</span>
+        </div>
+        <div class="nav__event-name">
+          <span>IronStar Sochi 70.3</span>
+          <span>Основное событие</span>
+        </div>
+      </div>
+    </div>
+    <div class="nav__week">
+      <ul>
+        <li>Недель</li>
+        <li>Понедельник</li>
+        <li>Вторник</li>
+        <li>Среда</li>
+        <li>Четверг</li>
+        <li>Пятница</li>
+        <li>Суббота</li>
+        <li>Воскресенье</li>
+      </ul>
+    </div>
+  </section>
+  <section id="calendar"></section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/ru.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
