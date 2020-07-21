@@ -1,8 +1,8 @@
 const modal = $.modal()
 
 document.addEventListener('click', function(event) {
-  const btnTYpe = event.target.dataset.modal
-  if (btnTYpe === 'workout') {
+  const btnType = event.target.dataset.modal
+  if (btnType === 'workout') {
     modal.open()
   }
 })
