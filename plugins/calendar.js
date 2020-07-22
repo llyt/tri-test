@@ -73,7 +73,7 @@ function getStartDate(date) {
 }
 
 $.calendar = function() {
-  const ROW_COUNT = 10
+  const ROW_COUNT = 9
   const currentDate = moment()
   const monthAgoDate = moment().subtract(1, 'month')
   const startDate = getStartDate(monthAgoDate)
@@ -81,7 +81,7 @@ $.calendar = function() {
   $calendar.classList.add('calendar-wrapper')
   for (let i = 0; i < ROW_COUNT; i += 1) {
     const row = _createCalendarRow({
-      weekNum: ROW_COUNT - i,
+      weekNum: ROW_COUNT - i === 4 ? null : ROW_COUNT - i,
       startDate: i === 0 ? startDate : startDate.add(7, 'days'),
       currentDate
     })
