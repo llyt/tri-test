@@ -67,7 +67,7 @@ function getStartDate(date) {
       dayDivision = 6
       break
     default:
-      dayDivision = 6
+      dayDivision = 0
   }
   return date.subtract(dayDivision, 'days')
 }
@@ -81,7 +81,7 @@ $.calendar = function() {
   $calendar.classList.add('calendar-wrapper')
   for (let i = 0; i < ROW_COUNT; i += 1) {
     const row = _createCalendarRow({
-      weekNum: ROW_COUNT - i === 4 ? null : ROW_COUNT - i,
+      weekNum: ROW_COUNT - i === 5 ? null : ROW_COUNT - i,
       startDate: i === 0 ? startDate : startDate.add(7, 'days'),
       currentDate
     })
