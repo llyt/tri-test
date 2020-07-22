@@ -1,3 +1,6 @@
+import moment from 'moment'
+import './calendar.css'
+
 function _createCalendarCell(options) {
   const cell = document.createElement('div')
   cell.classList.add('calendar-cell')
@@ -39,7 +42,7 @@ function _createCalendarRow(options) {
       today
     })
 
-    row.append(cell)
+    row.appendChild(cell)
   }
   return row
 }
@@ -72,7 +75,7 @@ function getStartDate(date) {
   return date.subtract(dayDivision, 'days')
 }
 
-$.calendar = function() {
+export default function() {
   const ROW_COUNT = 9
   const currentDate = moment()
   const monthAgoDate = moment().subtract(1, 'month')
@@ -85,7 +88,7 @@ $.calendar = function() {
       startDate: i === 0 ? startDate : startDate.add(7, 'days'),
       currentDate
     })
-    $calendar.append(row)
+    $calendar.appendChild(row)
   }
   return $calendar
 }

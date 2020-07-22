@@ -1,3 +1,5 @@
+import './modal.css'
+
 function _createModal() {
   const modal = document.createElement('div')
   modal.classList.add('modal')
@@ -41,21 +43,31 @@ function _createModal() {
       </div>
     </div>
   `)
-  document.body.prepend(modal)
+  document.body.appendChild(modal)
   return modal
 }
 
-$.modal = function(options) {
-  const $modal = _createModal(options)
+function modalScrollOn() {
+  const scrollWidth = window.innerWidth - document.documentElement.clientWidth
+  document.body.style.overflow = 'hidden'
+  document.body.style.paddingRight = `${scrollWidth}px`
+}
 
+function modalScrollOff() {
+  document.body.style.overflow = 'auto'
+  document.body.style.paddingRight = '0'
+}
+
+export default function(options) {
+  const $modal = _createModal(options)
   const modal = {
     open() {
       $modal.classList.add('open')
-      disableScroll()
+      modalScrollOn()
     },
     close() {
       $modal.classList.remove('open')
-      enableScroll()
+      modalScrollOff()
     },
 
   }

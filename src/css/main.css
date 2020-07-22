@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: calc(100vw - 15px);
   position: fixed;
   top: 0;
   height: 26px;
@@ -48,7 +48,7 @@ body {
 }
 
 .nav {
-  width: 100%;
+  width: calc(100vw - 15px);
   position: fixed;
   background: #FFFFFF;
   top: 26px;
