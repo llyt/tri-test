@@ -12,6 +12,6 @@ const calendar = $.calendar()
 document.getElementById('calendar').append(calendar)
 
 window.scroll({
-  top: 670,
+  top: 500,
   behavior: 'smooth'
 })
