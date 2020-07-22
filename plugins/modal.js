@@ -50,15 +50,12 @@ $.modal = function(options) {
 
   const modal = {
     open() {
-      const scrollWidth = window.innerWidth - document.documentElement.clientWidth;
       $modal.classList.add('open')
-      document.body.style.overflow = 'hidden'
-      document.body.style.paddingRight = `${scrollWidth}px`
+      disableScroll()
     },
     close() {
       $modal.classList.remove('open')
-      document.body.style.overflow = 'auto'
-      document.body.style.paddingRight = 0
+      enableScroll()
     },
 
   }
