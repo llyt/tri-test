@@ -18,7 +18,7 @@ module.exports = {
   },
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'public')
   },
   devServer: {
     port: 4500
@@ -40,7 +40,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/img'),
-          to: path.resolve(__dirname, 'dist/img')
+          to: path.resolve(__dirname, 'public/img')
         },
       ]
     }),
@@ -82,7 +82,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'img/',
-            publicPath: 'assets/img/'
+            publicPath: 'img/'
           }
         }]
       },
